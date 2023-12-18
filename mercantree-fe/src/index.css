@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vue select custom styles */
+:root, [data-theme] {
+    --vs-controls-color: theme('colors.gray.400');
+    
+    --vs-dropdown-bg: theme('colors.base-200');
+    --vs-dropdown-option-color: theme('colors.base-content');
+    
+    --vs-selected-color: theme('colors.base-content');
+    
+    --vs-search-input-color: theme('colors.base-content');
+    
+    --vs-dropdown-bg: theme('colors.base-100');
+    --vs-dropdown-option--active-bg: theme('colors.primary');
+}
+
+body {
+    @apply h-screen;
+}
+
+.stat-value {
+    @apply font-bold;
+    @apply text-2xl;
+}
+
+body.sidebar--open .sidebar {
+    @apply flex;
+}
+
+.container {
+    @apply px-4;
+    @apply my-10;
+}
+
+.container__child {
+    @apply p-2;
+    @apply bg-base-200;
+}
+
+.sidebar__item a {
+    @apply flex;
+    @apply flex-col;
+}
+
+.sidebar__item a.router-link-exact-active {
+    @apply text-secondary;
+}
